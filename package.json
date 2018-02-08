@@ -1,0 +1,20 @@
+{
+  "name": "es6modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --progress --watch",
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js' --directory --port 7777 --browser 'FirefoxDeveloperEdition'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "browser-sync": "^2.23.6",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {}
+}
