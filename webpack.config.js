@@ -7,7 +7,7 @@ module.exports = {
     filename: './js/app.js',
   },
   output: {
-    filename: './js/_build/build.js',
+    filename: './js/_build/bundle.js',
   },
   module: {
     loaders: [
@@ -16,7 +16,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015-native-modules'],
+          presets: [
+            ['es2015', { 'modules': false }],
+          ],
         },
       },
     ],

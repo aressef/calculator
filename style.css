@@ -1,8 +1,12 @@
+.body {
+}
+
 
 .container {
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
   grid-template-rows: 100px 600px 100px;
+  background-color: #383636;
 }
 
 .calculator {
