@@ -6,7 +6,6 @@ const equations = {
   divide: (a, b) => a / b,
 };
 
-console.log('test1234');
 
 // query selectors
 
