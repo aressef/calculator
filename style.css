@@ -1,8 +1,11 @@
+body {
+  background-color: #e7e9de;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
   grid-template-rows: 100px 600px 100px;
-  background-color: #383636;
 }
 
 .calculator {
@@ -20,7 +23,7 @@
     "one two three equals"
     "zero zero decimal equals";
   padding: 20px;
-  background-color: #e7e9de;
+  background-color: #626060;
   border-radius: 10px;
 }
 
@@ -28,13 +31,35 @@
   grid-area: screen;
   background: #dadbc0;
   color: #626060;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  text-align: right;
+}
+
+.result {
+  font-size: 48px;
+  margin: 0;
+  padding: 5px;
+}
+
+.equation {
+  font-size: 18px;
+  border: solid 1px red;
+  margin: 0;
+
 }
 
 .button {
-  color: #928b8b;
-  background-color: #626060;
+  color: #f9f6db;
+  background-color: #383636;
   border-radius: 10px;
   font-size: 24px;
+}
+
+.clear {
+  background-color: #d88e2d;
+  color: #f9f6db;
 }
 
 .all_clear {
