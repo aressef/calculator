@@ -50,7 +50,7 @@ function clearLastEntry(e) {
 
 function returnAnswer(e) {
   if (e.target.classList.contains('equals')) {
-    result.textContent = 'lol';
+    result.textContent = eval(equation.textContent);
   }
 }
 
