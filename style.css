@@ -25,12 +25,12 @@ body {
   padding: 20px;
   background-color: #626060;
   border-radius: 10px;
+  box-shadow: 5px 10px 6px 0px rgba(176,174,176,1);
 }
 
 .screen {
   grid-area: screen;
   background: #dadbc0;
-  color: #626060;
   border-radius: 5px;
   display: grid;
   grid-template-rows: 2fr 1fr;
@@ -38,16 +38,15 @@ body {
 }
 
 .result {
-  font-size: 48px;
-  margin: 0;
-  padding: 5px;
+  color: #626060;
+  font-size: 56px;
+  margin: 0 8px 0 0;
 }
 
 .equation {
-  font-size: 18px;
-  border: solid 1px red;
-  margin: 0;
-
+  color: #686666;
+  font-size: 24px;
+  margin: 0 12px 0 0;
 }
 
 .button {
