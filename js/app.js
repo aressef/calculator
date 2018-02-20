@@ -1,34 +1,33 @@
 // query selectors
-const screen = document.querySelector('.screen');
 const result = document.querySelector('.result');
 const equation = document.querySelector('.equation');
-const divide = document.querySelector('.divide');
-const multiply = document.querySelector('.multiply');
-const subtract = document.querySelector('.add');
-const add = document.querySelector('.subtract');
-const equals = document.querySelector('.equals');
-const decimal = document.querySelector('.decimal');
 
 // return number clicked
 function displayToScreen(e) {
-  // const buttonToNum = parseInt(e.target.textContent, 10);
-
+  const errorMessage = 'Error: Limit Met';
   // add button clicked to equations textContent
-  if (e.target.classList.contains('num')) {
-    equation.textContent += e.target.textContent;
-  } else if (e.target.classList.contains('operator') && equation.textContent !== '') {
-    const checkForSpace = equation.textContent.split('');
-    const lastIndex = checkForSpace.length - 1;
-
-    if (checkForSpace[lastIndex] !== ' ') {
-      equation.textContent += ` ${e.target.textContent} `;
-    }
+  if (equation.textContent === errorMessage) {
+    equation.textContent = '';
   }
 
-  // make last button clicked results textContent
-  // if button clicked is number or operator
-  if (e.target.classList.contains('num' || 'operator')) {
-    result.textContent = e.target.textContent;
+  if (equation.textContent.length < 25) {
+    if (e.target.classList.contains('num')) {
+      equation.textContent += e.target.textContent;
+    } else if (e.target.classList.contains('operator') && equation.textContent !== '') {
+      const checkForSpace = equation.textContent.split('');
+      const lastIndex = checkForSpace.length - 1;
+
+      if (checkForSpace[lastIndex] !== ' ') {
+        equation.textContent += `${e.target.textContent}`;
+      }
+    }
+    // make last button clicked results textContent
+    // if button clicked is number or operator
+    if (e.target.classList.contains('num' || 'operator')) {
+      result.textContent = e.target.textContent;
+    }
+  } else {
+    equation.textContent = errorMessage;
   }
 }
 
@@ -36,6 +35,7 @@ function displayToScreen(e) {
 function clearAll(e) {
   if (e.target.classList.contains('all_clear')) {
     equation.textContent = '';
+    result.textContent = 0;
   }
 }
 
